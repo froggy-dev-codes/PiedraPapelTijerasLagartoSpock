@@ -7,10 +7,14 @@ let final = document.getElementById("final");
 // capturamos la imagen de la maquina
 let imagenMaquina = document.getElementById("imagenMaquina");
 
+// capturamos la flecha ganadora
+let flecha = document.getElementById("flecha");
+
 // reinicio
 let reinicio = {
     src: imagenMaquina.src,
-    alt: imagenMaquina.alt
+    alt: imagenMaquina.alt,
+    flecha: "❓"
 }
 
 
@@ -38,9 +42,11 @@ imagen[0].addEventListener("click", () => {
         if (dato) {
             imagenMaquina.src = imagen[3].src;
             imagenMaquina.alt = imagen[3].alt
+            flecha.textContent = "👈 winner";
         } else {
             imagenMaquina.src = imagen[4].src;
             imagenMaquina.alt = imagen[4].alt
+            flecha.textContent = "👈 winner";
         }
         contadorCPU++;
         cpu.textContent = `CPU ➖ ${contadorCPU}`
@@ -48,10 +54,12 @@ imagen[0].addEventListener("click", () => {
     } else {
         if (!dato) {
             imagenMaquina.src = imagen[2].src;
-            imagenMaquina.alt = imagen[2].alt
+            imagenMaquina.alt = imagen[2].alt;
+            flecha.textContent = "winner 👉";
         } else {
             imagenMaquina.src = imagen[1].src;
             imagenMaquina.alt = imagen[1].alt
+            flecha.textContent = "winner 👉";
         }
 
         contadorLOCAL++;
@@ -72,10 +80,12 @@ imagen[1].addEventListener("click", () => {
 
         if (dato) {
             imagenMaquina.src = imagen[3].src;
-            imagenMaquina.alt = imagen[3].alt
+            imagenMaquina.alt = imagen[3].alt;
+            flecha.textContent = "👈 winner";
         } else {
             imagenMaquina.src = imagen[0].src;
-            imagenMaquina.alt = imagen[0].alt
+            imagenMaquina.alt = imagen[0].alt;
+            flecha.textContent = "👈 winner";
         }
 
         contadorCPU++;
@@ -84,10 +94,12 @@ imagen[1].addEventListener("click", () => {
     } else {
         if (!dato) {
             imagenMaquina.src = imagen[4].src;
-            imagenMaquina.alt = imagen[4].alt
+            imagenMaquina.alt = imagen[4].alt;
+            flecha.textContent = "winner 👉";
         } else {
             imagenMaquina.src = imagen[3].src;
-            imagenMaquina.alt = imagen[3].alt
+            imagenMaquina.alt = imagen[3].alt;
+            flecha.textContent = "winner 👉";
         }
 
         contadorLOCAL++;
@@ -108,9 +120,11 @@ imagen[2].addEventListener("click", () => {
         if (dato) {
             imagenMaquina.src = imagen[0].src;
             imagenMaquina.alt = imagen[0].alt;
+            flecha.textContent = "👈 winner";
         } else {
             imagenMaquina.src = imagen[1].src;
             imagenMaquina.alt = imagen[1].alt;
+            flecha.textContent = "👈 winner";
         }
 
         contadorCPU++;
@@ -119,9 +133,11 @@ imagen[2].addEventListener("click", () => {
         if (!dato) {
             imagenMaquina.src = imagen[3].src;
             imagenMaquina.alt = imagen[3].alt;
+            flecha.textContent = "winner 👉";
         } else {
             imagenMaquina.src = imagen[4].src;
             imagenMaquina.alt = imagen[4].alt;
+            flecha.textContent = "winner 👉";
         }
 
         contadorLOCAL++;
@@ -142,10 +158,12 @@ imagen[3].addEventListener("click", () => {
 
         if (dato) {
             imagenMaquina.src = imagen[2].src;
-            imagenMaquina.alt = imagen[2].alt
+            imagenMaquina.alt = imagen[2].alt;
+            flecha.textContent = "👈 winner";
         } else {
             imagenMaquina.src = imagen[4].src;
-            imagenMaquina.alt = imagen[4].alt
+            imagenMaquina.alt = imagen[4].alt;
+            flecha.textContent = "👈 winner";
         }
 
         contadorCPU++;
@@ -154,10 +172,12 @@ imagen[3].addEventListener("click", () => {
     } else {
         if (!dato) {
             imagenMaquina.src = imagen[0].src;
-            imagenMaquina.alt = imagen[0].alt
+            imagenMaquina.alt = imagen[0].alt;
+            flecha.textContent = "winner 👉";
         } else {
             imagenMaquina.src = imagen[1].src;
-            imagenMaquina.alt = imagen[1].alt
+            imagenMaquina.alt = imagen[1].alt;
+            flecha.textContent = "winner 👉";
         }
 
         contadorLOCAL++;
@@ -178,10 +198,12 @@ imagen[4].addEventListener("click", () => {
 
         if (dato) {
             imagenMaquina.src = imagen[2].src;
-            imagenMaquina.alt = imagen[2].alt
+            imagenMaquina.alt = imagen[2].alt;
+            flecha.textContent = "👈 winner";
         } else {
             imagenMaquina.src = imagen[1].src;
-            imagenMaquina.alt = imagen[1].alt
+            imagenMaquina.alt = imagen[1].alt;
+            flecha.textContent = "👈 winner";
         }
 
         contadorCPU++;
@@ -190,10 +212,12 @@ imagen[4].addEventListener("click", () => {
     } else {
         if (!dato) {
             imagenMaquina.src = imagen[0].src;
-            imagenMaquina.alt = imagen[0].alt
+            imagenMaquina.alt = imagen[0].alt;
+            flecha.textContent = "winner 👉";
         } else {
             imagenMaquina.src = imagen[3].src;
-            imagenMaquina.alt = imagen[3].alt
+            imagenMaquina.alt = imagen[3].alt;
+            flecha.textContent = "winner 👉";
         }
 
         contadorLOCAL++;
@@ -213,6 +237,8 @@ function reiniciar() {
 
         imagenMaquina.src = reinicio.src;
         imagenMaquina.alt = reinicio.alt;
+
+        flecha.textContent = reinicio.flecha
     }, 2500);
 }
 

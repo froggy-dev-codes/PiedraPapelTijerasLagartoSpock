@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/mundo.png" type="image/icon" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>P-L-P-T-S</title>
+</head>
+
+<body>
+    <main id="principal">
+        <div id="contenedorTitulo">
+            <img src="./assets/tijeras.png" alt="tijeras" width="50px" height="50px" />
+            <img src="./assets/lagarto.png" alt="lagarto" width="50px" height="50px" />
+            <img src="./assets/papel.png" alt="papel" width="50px" height="50px" />
+            <img src="./assets/piedra.png" alt="piedra" width="50px" height="50px" />
+            <img src="./assets/spock.png" alt="spock" width="50px" height="50px" />
+        </div>
+
+        <div id="juego">
+            <div class="card maquina">
+                <h3>Maquina</h3>
+                <div id="contenedorMaquina">
+                    <img src="./assets/pensando.png" alt="pensando" width="100px" height="100px" id="imagenMaquina">
+                </div>
+            </div>
+
+            <div class="card jugador">
+                <h3>Jugador</h3>
+                <div id="contenedorJugador">
+                    <img src="./assets/pensando.png" alt="pensando" width="70px" height="70px" id="final" />
+                </div>
+                <div id="imagenes">
+                    <img src="./assets/tijeras.png" alt="tijeras" width="30px" height="30px" class="imagenDesicion" />
+                    <img src="./assets/lagarto.png" alt="lagarto" width="30px" height="30px" class="imagenDesicion" />
+                    <img src="./assets/papel.png" alt="papel" width="30px" height="30px" class="imagenDesicion" />
+                    <img src="./assets/piedra.png" alt="piedra" width="30px" height="30px" class="imagenDesicion" />
+                    <img src="./assets/spock.png" alt="spock" width="30px" height="30px" class="imagenDesicion" />
+                </div>
+            </div>
+
+            <div class="puntaje">
+                <h3>PUNTAJE</h3>
+                <div class="contador">
+                    <span id="cpu" class="spanPuntaje">Maquina ➖ </span>
+                    <span id="local" class="spanPuntaje">Jugador ➖</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Froggy Dev. Todos los derechos reservados.</p>
+        <img src="./assets/logo.png" alt="Logo" width="100px" height="80px">
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -43,7 +43,7 @@ imagen[0].addEventListener("click", () => {
             imagenMaquina.alt = imagen[4].alt
         }
         contadorCPU++;
-        cpu.textContent = `Maquina ➖ ${contadorCPU}`
+        cpu.textContent = `CPU ➖ ${contadorCPU}`
 
     } else {
         if (!dato) {
@@ -79,7 +79,7 @@ imagen[1].addEventListener("click", () => {
         }
 
         contadorCPU++;
-        cpu.textContent = `Maquina ➖ ${contadorCPU}`
+        cpu.textContent = `CPU ➖ ${contadorCPU}`
 
     } else {
         if (!dato) {
@@ -114,7 +114,7 @@ imagen[2].addEventListener("click", () => {
         }
 
         contadorCPU++;
-        cpu.textContent = `Maquina ➖ ${contadorCPU}`
+        cpu.textContent = `CPU ➖ ${contadorCPU}`
     } else {
         if (!dato) {
             imagenMaquina.src = imagen[3].src;
@@ -149,7 +149,7 @@ imagen[3].addEventListener("click", () => {
         }
 
         contadorCPU++;
-        cpu.textContent = `Maquina ➖ ${contadorCPU}`
+        cpu.textContent = `CPU ➖ ${contadorCPU}`
 
     } else {
         if (!dato) {
@@ -185,7 +185,7 @@ imagen[4].addEventListener("click", () => {
         }
 
         contadorCPU++;
-        cpu.textContent = `Maquina ➖ ${contadorCPU}`
+        cpu.textContent = `CPU ➖ ${contadorCPU}`
 
     } else {
         if (!dato) {
@@ -215,3 +215,19 @@ function reiniciar() {
         imagenMaquina.alt = reinicio.alt;
     }, 2500);
 }
+
+// --------------------------------
+// reglas
+const titulo = document.getElementById("tituloOculto");
+const oculto = document.getElementById("oculto");
+
+titulo.addEventListener("click", () => {
+    oculto.classList.toggle("visible");
+});
+
+// Opcional: ocultar si se hace clic fuera
+document.addEventListener("click", (e) => {
+    if (!document.getElementById("reglas").contains(e.target)) {
+        oculto.classList.remove("visible");
+    }
+});
